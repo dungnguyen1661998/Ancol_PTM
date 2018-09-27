@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="libModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Skills" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="InsAt" Type="datetime" />
+    <Property Name="InsBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdAt" Type="datetime" />
+    <Property Name="UpdBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ManagerComment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProjectTaskid" Type="uniqueidentifier" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="InsAt" Type="datetime" />
+    <Property Name="InsBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdAt" Type="datetime" />
+    <Property Name="UpdBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="ClientName" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="InsAt" Type="datetime" />
+    <Property Name="InsBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdAt" Type="datetime" />
+    <Property Name="UpdBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProjectTask">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Employeeid" Type="uniqueidentifier" />
+    <Property Name="TaskStartDate" Type="datetime" />
+    <Property Name="TaskEndDate" Type="datetime" />
+    <Property Name="TaskStatusid" Type="uniqueidentifier" />
+    <Property Name="UserStoryid" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="InsAt" Type="datetime" />
+    <Property Name="InsBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdAt" Type="datetime" />
+    <Property Name="UpdBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TaskStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="InsAt" Type="datetime" />
+    <Property Name="InsBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdAt" Type="datetime" />
+    <Property Name="UpdBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserStory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Story" Type="nvarchar(max)" />
+    <Property Name="Projectid" Type="uniqueidentifier" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="InsAt" Type="datetime" />
+    <Property Name="InsBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="UpdAt" Type="datetime" />
+    <Property Name="UpdBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_ManagerComment_ProjectTask">
+    <End Role="ProjectTask" Type="Self.ProjectTask" Multiplicity="0..1" />
+    <End Role="ManagerComment" Type="Self.ManagerComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectTask">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ManagerComment">
+        <PropertyRef Name="ProjectTaskid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectTask_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="ProjectTask" Type="Self.ProjectTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProjectTask">
+        <PropertyRef Name="Employeeid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectTask_TaskStatus">
+    <End Role="TaskStatus" Type="Self.TaskStatus" Multiplicity="0..1" />
+    <End Role="ProjectTask" Type="Self.ProjectTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaskStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProjectTask">
+        <PropertyRef Name="TaskStatusid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProjectTask_UserStory">
+    <End Role="UserStory" Type="Self.UserStory" Multiplicity="0..1" />
+    <End Role="ProjectTask" Type="Self.ProjectTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserStory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProjectTask">
+        <PropertyRef Name="UserStoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserStory_Project">
+    <End Role="Project" Type="Self.Project" Multiplicity="0..1" />
+    <End Role="UserStory" Type="Self.UserStory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserStory">
+        <PropertyRef Name="Projectid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="libModelStoreContainer">
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ManagerComment" EntityType="Self.ManagerComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectTask" EntityType="Self.ProjectTask" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaskStatus" EntityType="Self.TaskStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserStory" EntityType="Self.UserStory" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ManagerComment_ProjectTask" Association="Self.FK_ManagerComment_ProjectTask">
+      <End Role="ProjectTask" EntitySet="ProjectTask" />
+      <End Role="ManagerComment" EntitySet="ManagerComment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectTask_Employee" Association="Self.FK_ProjectTask_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="ProjectTask" EntitySet="ProjectTask" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectTask_TaskStatus" Association="Self.FK_ProjectTask_TaskStatus">
+      <End Role="TaskStatus" EntitySet="TaskStatus" />
+      <End Role="ProjectTask" EntitySet="ProjectTask" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProjectTask_UserStory" Association="Self.FK_ProjectTask_UserStory">
+      <End Role="UserStory" EntitySet="UserStory" />
+      <End Role="ProjectTask" EntitySet="ProjectTask" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserStory_Project" Association="Self.FK_UserStory_Project">
+      <End Role="Project" EntitySet="Project" />
+      <End Role="UserStory" EntitySet="UserStory" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

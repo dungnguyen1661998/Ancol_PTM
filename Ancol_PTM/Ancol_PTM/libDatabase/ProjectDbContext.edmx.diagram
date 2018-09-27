@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="42044dd441f54d55a7526471fe731da0" Name="Diagram1">
+        <EntityTypeShape EntityType="libModel.Employee" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="libModel.ManagerComment" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="libModel.Project" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="libModel.ProjectTask" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="libModel.TaskStatu" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="libModel.UserStory" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="libModel.FK_ProjectTask_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="libModel.FK_ManagerComment_ProjectTask" ManuallyRouted="false" />
+        <AssociationConnector Association="libModel.FK_UserStory_Project" ManuallyRouted="false" />
+        <AssociationConnector Association="libModel.FK_ProjectTask_TaskStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="libModel.FK_ProjectTask_UserStory" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

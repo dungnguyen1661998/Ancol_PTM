@@ -1,0 +1,199 @@
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\ApplicationInsights.config
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Ancol_PTM.dll.config
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Ancol_PTM.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Ancol_PTM.pdb
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\csc.exe
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\csc.exe.config
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\csc.rsp
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\csi.exe
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\csi.exe.config
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\csi.rsp
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.AppContext.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Console.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.IO.Compression.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.IO.Pipes.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Security.Claims.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.ValueTuple.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Xml.XPath.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\vbc.exe
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\vbc.exe.config
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\vbc.rsp
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\VBCSCompiler.exe
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Antlr3.Runtime.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\EntityFramework.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\EntityFramework.SqlServer.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.Web.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.ApplicationInsights.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Newtonsoft.Json.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Web.Helpers.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Web.Mvc.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Web.Optimization.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Web.Razor.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Web.WebPages.Deployment.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Web.WebPages.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Web.WebPages.Razor.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\WebGrease.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\EntityFramework.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\EntityFramework.SqlServer.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Web.Helpers.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Web.Mvc.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Web.Optimization.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Web.Razor.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Web.WebPages.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Web.WebPages.Deployment.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Web.WebPages.Razor.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Newtonsoft.Json.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Antlr3.Runtime.pdb
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.Web.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\obj\Debug\Ancol_PTM.csprojAssemblyReference.cache
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\obj\Debug\Ancol_PTM.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\obj\Debug\Ancol_PTM.csproj.CopyComplete
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\obj\Debug\Ancol_PTM.dll
+C:\Users\MSI\Desktop\New folder (2)\Ancol_PTM\Ancol_PTM\obj\Debug\Ancol_PTM.pdb
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\ApplicationInsights.config
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Ancol_PTM.dll.config
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Ancol_PTM.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Ancol_PTM.pdb
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\csc.exe
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\csc.exe.config
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\csc.rsp
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\csi.exe
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\csi.exe.config
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\csi.rsp
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.AppContext.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Console.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.IO.Compression.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.IO.Pipes.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Security.Claims.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.ValueTuple.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Xml.XPath.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\vbc.exe
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\vbc.exe.config
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\vbc.rsp
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\VBCSCompiler.exe
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Antlr3.Runtime.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\EntityFramework.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\EntityFramework.SqlServer.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.Web.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.ApplicationInsights.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AspNet.SignalR.SqlServer.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.Owin.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.Owin.Security.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Newtonsoft.Json.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Owin.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Web.Helpers.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Web.Mvc.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Web.Optimization.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Web.Razor.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Web.WebPages.Deployment.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Web.WebPages.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Web.WebPages.Razor.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\WebGrease.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\EntityFramework.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\EntityFramework.SqlServer.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AspNet.SignalR.SqlServer.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.Owin.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.Owin.Security.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Web.Helpers.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Web.Mvc.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Web.Optimization.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Web.Razor.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Web.WebPages.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Web.WebPages.Deployment.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Web.WebPages.Razor.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Newtonsoft.Json.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Antlr3.Runtime.pdb
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.AI.Web.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\obj\Debug\Ancol_PTM.csprojAssemblyReference.cache
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\obj\Debug\Ancol_PTM.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\obj\Debug\Ancol_PTM.csproj.CopyComplete
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\obj\Debug\Ancol_PTM.dll
+C:\Users\MSI\Desktop\Ancol_PTM\Ancol_PTM\Ancol_PTM\obj\Debug\Ancol_PTM.pdb
