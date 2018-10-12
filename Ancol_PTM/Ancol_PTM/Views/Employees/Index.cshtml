@@ -10,49 +10,61 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
-    <tr>
-        <th>
-            <p>First Name </p>
-        </th>
-        <th>
-            <p>Last Name </p>
-        </th>
-        <th>
-            <p>Contact No </p>
-        </th>
-        <th>
-            <p>Email </p>
-        </th>
-        <th>
-            <p>Skills</p>
-        </th>
-        
-    </tr>
+  
+    @using (Html.BeginForm())
+    {
+    <p>
+        Name: @Html.TextBox("SearchName")
+        Phone number: @Html.TextBox("SearchPN")
+        <input type="submit" value="Search" />
+    </p>
+       
+    }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ContactNo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Skills)
-        </td>
-     
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+        <tr>
+            <th>
+                <p>Full Name</p>
+            </th>
+            <th>
+                <p>Contact No </p>
+            </th>
+            <th>
+                <p>Email </p>
+            </th>
+            <th>
+                <p>Skills</p>
+            </th>
+            
+
+
+        </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Skills)
+            </td>
+            
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+
+                @Html.ActionLink("Delete", "Delete",
+                 new { id = item.Id },
+                 new { onclick = "return confirm('Are you sure to delete this component?');" })
+
+            </td>
+        </tr>
+    }
 
 </table>

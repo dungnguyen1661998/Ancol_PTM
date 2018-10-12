@@ -10,38 +10,49 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
-    <tr>
-        <th>
-            <p>First Name</p>
-        </th>
-        <th>
-            <p>Last Name</p>
-        </th>
-        <th>
-            <p>Comments</p>
-        </th>
-        
-        <th></th>
-    </tr>
+    @using (Html.BeginForm())
+    {
+        <p>
+            Name: @Html.TextBox("SearchName")
+            Phone number: @Html.DropDownList
+            <input type="submit" value="Search" />
+        </p>
+        <tr>
+            <th>
+                <p>Full Name</p>
+            </th>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Comments)
-        </td>
-        
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+            <th>
+                <p>Comments</p>
+            </th>
+            <th>
+                <p>Project Task</p>
+            </th>
 
-</table>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Comments)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProjectTaskid)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete",
+                     new { id = item.Id },
+                     new { onclick = "return confirm('Are you sure about your decided???');" })
+                </td>
+            </tr>
+        }
+
+    </table>

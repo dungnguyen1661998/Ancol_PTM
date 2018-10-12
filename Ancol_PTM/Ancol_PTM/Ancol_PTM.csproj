@@ -258,7 +258,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -273,33 +275,21 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Projects\Create.cshtml" />
-    <Content Include="Views\Projects\Delete.cshtml" />
-    <Content Include="Views\Projects\Details.cshtml" />
     <Content Include="Views\Projects\Edit.cshtml" />
     <Content Include="Views\Projects\Index.cshtml" />
     <Content Include="Views\Employees\Create.cshtml" />
-    <Content Include="Views\Employees\Delete.cshtml" />
-    <Content Include="Views\Employees\Details.cshtml" />
     <Content Include="Views\Employees\Edit.cshtml" />
     <Content Include="Views\Employees\Index.cshtml" />
     <Content Include="Views\ManagerComments\Create.cshtml" />
-    <Content Include="Views\ManagerComments\Delete.cshtml" />
-    <Content Include="Views\ManagerComments\Details.cshtml" />
     <Content Include="Views\ManagerComments\Edit.cshtml" />
     <Content Include="Views\ManagerComments\Index.cshtml" />
     <Content Include="Views\TaskStatus\Create.cshtml" />
-    <Content Include="Views\TaskStatus\Delete.cshtml" />
-    <Content Include="Views\TaskStatus\Details.cshtml" />
     <Content Include="Views\TaskStatus\Edit.cshtml" />
     <Content Include="Views\TaskStatus\Index.cshtml" />
     <Content Include="Views\UserStories\Create.cshtml" />
-    <Content Include="Views\UserStories\Delete.cshtml" />
-    <Content Include="Views\UserStories\Details.cshtml" />
     <Content Include="Views\UserStories\Edit.cshtml" />
     <Content Include="Views\UserStories\Index.cshtml" />
     <Content Include="Views\ProjectTasks\Create.cshtml" />
-    <Content Include="Views\ProjectTasks\Delete.cshtml" />
-    <Content Include="Views\ProjectTasks\Details.cshtml" />
     <Content Include="Views\ProjectTasks\Edit.cshtml" />
     <Content Include="Views\ProjectTasks\Index.cshtml" />
   </ItemGroup>

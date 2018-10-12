@@ -21,21 +21,7 @@ namespace Ancol_PTM.Controllers
             return View(userStories.ToList());
         }
 
-        // GET: UserStories/Details/5
-        public ActionResult Details(Guid? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            UserStory userStory = db.UserStories.Find(id);
-            if (userStory == null)
-            {
-                return HttpNotFound();
-            }
-            return View(userStory);
-        }
-
+       
         // GET: UserStories/Create
         public ActionResult Create()
         {
@@ -54,6 +40,7 @@ namespace Ancol_PTM.Controllers
             {
                 userStory.Id = Guid.NewGuid();
                 db.UserStories.Add(userStory);
+                InsertAuditFields(userStory);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -88,6 +75,7 @@ namespace Ancol_PTM.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(userStory).State = EntityState.Modified;
+                UpdateAuditFields(userStory);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -95,25 +83,8 @@ namespace Ancol_PTM.Controllers
             return View(userStory);
         }
 
-        // GET: UserStories/Delete/5
+    
         public ActionResult Delete(Guid? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            UserStory userStory = db.UserStories.Find(id);
-            if (userStory == null)
-            {
-                return HttpNotFound();
-            }
-            return View(userStory);
-        }
-
-        // POST: UserStories/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(Guid id)
         {
             UserStory userStory = db.UserStories.Find(id);
             db.UserStories.Remove(userStory);
@@ -128,6 +99,19 @@ namespace Ancol_PTM.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        private void InsertAuditFields(UserStory userStory)
+        {
+            userStory.IsDeleted = false;
+            userStory.InsAt = DateTime.Now;
+            userStory.InsBy = "Admin";
+            userStory.UpdAt = DateTime.Now;
+            userStory.UpdBy = "Admin";
+        }
+        private void UpdateAuditFields(UserStory userStory)
+        {
+            userStory.UpdAt = DateTime.Now;
+            userStory.UpdBy = "Admin";
         }
     }
 }

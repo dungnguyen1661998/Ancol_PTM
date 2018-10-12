@@ -15,25 +15,36 @@ namespace Ancol_PTM.Controllers
         private libEntities db = new libEntities();
 
         // GET: Projects
-        public ActionResult Index()
+        public ActionResult Index(String SearchName, DateTime? SearchStartDate, DateTime? SearchEndDate)
         {
-            return View(db.Projects.ToList());
+
+            var querry = from p in db.Projects
+                         where (bool)!p.IsDeleted
+                         select p;
+            //var list = db.Employees.Where(p => !Convert.ToBoolean( p.IsDeleted)).Select(p => p).ToList();
+            if (!string.IsNullOrEmpty(SearchName))
+            {
+                querry = from p in querry
+                         where (p.Name.Contains(SearchName))
+                         select p;
+            }
+            if ((SearchStartDate != null))
+            {
+                querry = from p in querry
+                         where ((p.StartDate >= SearchStartDate))
+                         select p;
+            }
+            if ((SearchEndDate != null))
+            {
+                querry = from p in querry
+                         where ((p.EndDate <= SearchEndDate))
+                         select p;
+            }
+
+            return View(querry.ToList());
         }
 
-        // GET: Projects/Details/5
-        public ActionResult Details(Guid? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Project project = db.Projects.Find(id);
-            if (project == null)
-            {
-                return HttpNotFound();
-            }
-            return View(project);
-        }
+
 
         // GET: Projects/Create
         public ActionResult Create()
@@ -52,6 +63,7 @@ namespace Ancol_PTM.Controllers
             {
                 project.Id = Guid.NewGuid();
                 db.Projects.Add(project);
+                InsertAuditFields(project);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -84,34 +96,18 @@ namespace Ancol_PTM.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(project).State = EntityState.Modified;
+                UpdateAuditFields(project);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(project);
         }
 
-        // GET: Projects/Delete/5
+        
         public ActionResult Delete(Guid? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
             Project project = db.Projects.Find(id);
-            if (project == null)
-            {
-                return HttpNotFound();
-            }
-            return View(project);
-        }
-
-        // POST: Projects/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(Guid id)
-        {
-            Project project = db.Projects.Find(id);
-            db.Projects.Remove(project);
+            project.IsDeleted = true;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -123,6 +119,19 @@ namespace Ancol_PTM.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        private void InsertAuditFields(Project project)
+        {
+            project.IsDeleted = false;
+            project.InsAt = DateTime.Now;
+            project.InsBy = "Admin";
+            project.UpdAt = DateTime.Now;
+            project.UpdBy = "Admin";
+        }
+        private void UpdateAuditFields(Project project)
+        {
+            project.UpdAt = DateTime.Now;
+            project.UpdBy = "Admin";
         }
     }
 }

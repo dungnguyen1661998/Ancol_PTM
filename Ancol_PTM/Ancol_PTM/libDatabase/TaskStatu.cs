@@ -11,7 +11,8 @@ namespace Ancol_PTM.libDatabase
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TaskStatu
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,7 +22,11 @@ namespace Ancol_PTM.libDatabase
         }
     
         public System.Guid Id { get; set; }
+
+        [Required(ErrorMessage ="Field is required")]
         public string Status { get; set; }
+        [Required(ErrorMessage = "Field is required")]
+
         public string Description { get; set; }
         public Nullable<bool> IsDeleted { get; set; }
         public Nullable<System.DateTime> InsAt { get; set; }

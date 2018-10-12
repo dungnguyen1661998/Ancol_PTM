@@ -15,25 +15,23 @@ namespace Ancol_PTM.Controllers
         private libEntities db = new libEntities();
 
         // GET: TaskStatus
-        public ActionResult Index()
+        public ActionResult Index(String SearchTask)
         {
-            return View(db.TaskStatus.ToList());
+
+            var querry = from p in db.TaskStatus
+                         where (bool)!p.IsDeleted
+                         select p;
+            //var list = db.Employees.Where(p => !Convert.ToBoolean( p.IsDeleted)).Select(p => p).ToList();
+            if (!string.IsNullOrEmpty(SearchTask))
+            {
+                querry = from p in querry
+                         where p.Status.Contains(SearchTask)
+                         select p;
+            }
+            return View(querry.ToList());
         }
 
-        // GET: TaskStatus/Details/5
-        public ActionResult Details(Guid? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            TaskStatu taskStatu = db.TaskStatus.Find(id);
-            if (taskStatu == null)
-            {
-                return HttpNotFound();
-            }
-            return View(taskStatu);
-        }
+
 
         // GET: TaskStatus/Create
         public ActionResult Create()
@@ -52,6 +50,7 @@ namespace Ancol_PTM.Controllers
             {
                 taskStatu.Id = Guid.NewGuid();
                 db.TaskStatus.Add(taskStatu);
+                InsertAuditFields(taskStatu);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -84,31 +83,14 @@ namespace Ancol_PTM.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(taskStatu).State = EntityState.Modified;
+                UpdateAuditFields(taskStatu);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(taskStatu);
         }
 
-        // GET: TaskStatus/Delete/5
         public ActionResult Delete(Guid? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            TaskStatu taskStatu = db.TaskStatus.Find(id);
-            if (taskStatu == null)
-            {
-                return HttpNotFound();
-            }
-            return View(taskStatu);
-        }
-
-        // POST: TaskStatus/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(Guid id)
         {
             TaskStatu taskStatu = db.TaskStatus.Find(id);
             db.TaskStatus.Remove(taskStatu);
@@ -123,6 +105,19 @@ namespace Ancol_PTM.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        private void InsertAuditFields(TaskStatu taskStatu)
+        {
+            taskStatu.IsDeleted = false;
+            taskStatu.InsAt = DateTime.Now;
+            taskStatu.InsBy = "Admin";
+            taskStatu.UpdAt = DateTime.Now;
+            taskStatu.UpdBy = "Admin";
+        }
+        private void UpdateAuditFields(TaskStatu taskStatu)
+        {
+            taskStatu.UpdAt = DateTime.Now;
+            taskStatu.UpdBy = "Admin";
         }
     }
 }

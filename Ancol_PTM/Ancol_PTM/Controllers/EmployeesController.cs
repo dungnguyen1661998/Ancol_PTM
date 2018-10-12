@@ -15,26 +15,29 @@ namespace Ancol_PTM.Controllers
         private libEntities db = new libEntities();
 
         // GET: Employees
-        public ActionResult Index()
+        public ActionResult Index(String SearchName, String SearchPN)
         {
-            return View(db.Employees.ToList());
-        }
-
-        // GET: Employees/Details/5
-        public ActionResult Details(Guid? id)
-        {
-            if (id == null)
+      
+            var querry = from p in db.Employees
+                         where (bool)!p.IsDeleted
+                         select p;
+            //var list = db.Employees.Where(p => !Convert.ToBoolean( p.IsDeleted)).Select(p => p).ToList();
+            if (!string.IsNullOrEmpty(SearchName))
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                 querry = from p in querry
+                        where (SearchName.Contains(p.LastName) || p.FirstName.Contains(SearchName) || p.LastName.Contains(SearchName))
+                      select p;
             }
-            Employee employee = db.Employees.Find(id);
-            if (employee == null)
+            if (!string.IsNullOrEmpty(SearchPN))
             {
-                return HttpNotFound();
+                querry = from p in querry
+                         where p.ContactNo.Contains(SearchPN)
+                         select p;
             }
-            return View(employee);
+            return View(querry.ToList());
         }
-
+            
+        
         // GET: Employees/Create
         public ActionResult Create()
         {
@@ -52,6 +55,7 @@ namespace Ancol_PTM.Controllers
             {
                 employee.Id = Guid.NewGuid();
                 db.Employees.Add(employee);
+                InsertAuditFields(employee);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -84,34 +88,18 @@ namespace Ancol_PTM.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(employee).State = EntityState.Modified;
+                UpdateAuditFields(employee);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(employee);
         }
 
-        // GET: Employees/Delete/5
+        
         public ActionResult Delete(Guid? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
             Employee employee = db.Employees.Find(id);
-            if (employee == null)
-            {
-                return HttpNotFound();
-            }
-            return View(employee);
-        }
-
-        // POST: Employees/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(Guid id)
-        {
-            Employee employee = db.Employees.Find(id);
-            db.Employees.Remove(employee);
+            employee.IsDeleted = true;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -123,6 +111,20 @@ namespace Ancol_PTM.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        private void InsertAuditFields(Employee employee)
+        {
+            employee.IsDeleted = false;
+            employee.InsAt = DateTime.Now;
+            employee.InsBy = "Admin";
+            employee.UpdAt = DateTime.Now;
+            employee.UpdBy = "Admin";
+        }
+        private void UpdateAuditFields(Employee employee)
+        {
+            employee.UpdAt = DateTime.Now;
+            employee.UpdBy = "Admin";
+
         }
     }
 }

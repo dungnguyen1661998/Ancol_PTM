@@ -21,20 +21,7 @@ namespace Ancol_PTM.Controllers
             return View(projectTasks.ToList());
         }
 
-        // GET: ProjectTasks/Details/5
-        public ActionResult Details(Guid? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            ProjectTask projectTask = db.ProjectTasks.Find(id);
-            if (projectTask == null)
-            {
-                return HttpNotFound();
-            }
-            return View(projectTask);
-        }
+        
 
         // GET: ProjectTasks/Create
         public ActionResult Create()
@@ -56,6 +43,7 @@ namespace Ancol_PTM.Controllers
             {
                 projectTask.Id = Guid.NewGuid();
                 db.ProjectTasks.Add(projectTask);
+                InsertAuditFields(projectTask);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -94,6 +82,7 @@ namespace Ancol_PTM.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(projectTask).State = EntityState.Modified;
+                UpdateAuditFields(projectTask);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -103,28 +92,13 @@ namespace Ancol_PTM.Controllers
             return View(projectTask);
         }
 
-        // GET: ProjectTasks/Delete/5
+       
+
+       
         public ActionResult Delete(Guid? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
             ProjectTask projectTask = db.ProjectTasks.Find(id);
-            if (projectTask == null)
-            {
-                return HttpNotFound();
-            }
-            return View(projectTask);
-        }
-
-        // POST: ProjectTasks/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(Guid id)
-        {
-            ProjectTask projectTask = db.ProjectTasks.Find(id);
-            db.ProjectTasks.Remove(projectTask);
+            projectTask.IsDeleted = true;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -136,6 +110,19 @@ namespace Ancol_PTM.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        private void InsertAuditFields(ProjectTask projectTask)
+        {
+            projectTask.IsDeleted = false;
+            projectTask.InsAt = DateTime.Now;
+            projectTask.InsBy = "Admin";
+            projectTask.UpdAt = DateTime.Now;
+            projectTask.UpdBy = "Admin";
+        }
+        private void UpdateAuditFields(ProjectTask projectTask)
+        {
+            projectTask.UpdAt = DateTime.Now;
+            projectTask.UpdBy = "Admin";
         }
     }
 }

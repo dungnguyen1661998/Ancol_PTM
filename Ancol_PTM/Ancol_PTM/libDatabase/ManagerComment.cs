@@ -11,12 +11,24 @@ namespace Ancol_PTM.libDatabase
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class ManagerComment
     {
         public System.Guid Id { get; set; }
+        [Required(ErrorMessage="field is required")]
+        [StringLength(50, ErrorMessage ="less than 50 and more than 3",MinimumLength =3)]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$", ErrorMessage = "The First Word Must Be On Capslock")]
+        [DisplayName("First Name")]
         public string FirstName { get; set; }
+        [Required(ErrorMessage = "Field is required")]
+        [StringLength(50, ErrorMessage ="less than 50 and more than 3",MinimumLength =3)]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$", ErrorMessage = "The First Word Must Be On Capslock")]
+        [DisplayName("Last Name")]
         public string LastName { get; set; }
+        [DisplayName("Project Task iD")]
+        [Required(ErrorMessage = "field is required")]
         public Nullable<System.Guid> ProjectTaskid { get; set; }
         public string Comments { get; set; }
         public Nullable<bool> IsDeleted { get; set; }
@@ -24,7 +36,15 @@ namespace Ancol_PTM.libDatabase
         public string InsBy { get; set; }
         public Nullable<System.DateTime> UpdAt { get; set; }
         public string UpdBy { get; set; }
-    
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
+
+
         public virtual ProjectTask ProjectTask { get; set; }
     }
 }

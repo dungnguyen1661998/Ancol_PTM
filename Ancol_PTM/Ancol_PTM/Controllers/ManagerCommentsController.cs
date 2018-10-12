@@ -15,27 +15,25 @@ namespace Ancol_PTM.Controllers
         private libEntities db = new libEntities();
 
         // GET: ManagerComments
-        public ActionResult Index()
+        public ActionResult Index(String SearchName, Guid? SearchProjectTaskid)
         {
-            var managerComments = db.ManagerComments.Include(m => m.ProjectTask);
-            return View(managerComments.ToList());
+            ViewBag.ProjectTaskid = new SelectList(db.ProjectTasks, "Id", "Id");
+            
+            var querry = from p in db.ManagerComments
+                         where (bool)!p.IsDeleted
+                         select p;
+            //var list = db.Employees.Where(p => !Convert.ToBoolean( p.IsDeleted)).Select(p => p).ToList();
+            if (!string.IsNullOrEmpty(SearchName))
+            {
+                querry = from p in querry
+                         where (SearchName.Contains(p.LastName) || p.FirstName.Contains(SearchName) || p.LastName.Contains(SearchName))
+                         select p;
+            }
+           
+            return View(querry.ToList());
         }
 
-        // GET: ManagerComments/Details/5
-        public ActionResult Details(Guid? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            ManagerComment managerComment = db.ManagerComments.Find(id);
-            if (managerComment == null)
-            {
-                return HttpNotFound();
-            }
-            return View(managerComment);
-        }
-
+        
         // GET: ManagerComments/Create
         public ActionResult Create()
         {
@@ -54,6 +52,7 @@ namespace Ancol_PTM.Controllers
             {
                 managerComment.Id = Guid.NewGuid();
                 db.ManagerComments.Add(managerComment);
+                InsertAuditFields(managerComment);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -88,6 +87,7 @@ namespace Ancol_PTM.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(managerComment).State = EntityState.Modified;
+                UpdateAuditFields(managerComment);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -95,25 +95,8 @@ namespace Ancol_PTM.Controllers
             return View(managerComment);
         }
 
-        // GET: ManagerComments/Delete/5
+       
         public ActionResult Delete(Guid? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            ManagerComment managerComment = db.ManagerComments.Find(id);
-            if (managerComment == null)
-            {
-                return HttpNotFound();
-            }
-            return View(managerComment);
-        }
-
-        // POST: ManagerComments/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(Guid id)
         {
             ManagerComment managerComment = db.ManagerComments.Find(id);
             db.ManagerComments.Remove(managerComment);
@@ -128,6 +111,19 @@ namespace Ancol_PTM.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        private void InsertAuditFields(ManagerComment manager)
+        {
+            manager.IsDeleted = false;
+            manager.InsAt = DateTime.Now;
+            manager.InsBy = "Admin";
+            manager.UpdAt = DateTime.Now;
+            manager.UpdBy = "Admin";
+        }
+        private void UpdateAuditFields(ManagerComment manager)
+        {
+            manager.UpdAt = DateTime.Now;
+            manager.UpdBy = "Admin";
         }
     }
 }

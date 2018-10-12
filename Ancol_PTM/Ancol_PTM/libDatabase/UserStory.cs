@@ -11,7 +11,9 @@ namespace Ancol_PTM.libDatabase
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class UserStory
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,7 +23,10 @@ namespace Ancol_PTM.libDatabase
         }
     
         public System.Guid Id { get; set; }
+        [Required(ErrorMessage = "Filled is required")]
         public string Story { get; set; }
+        [Required(ErrorMessage = "Filled is required")]
+        [DisplayName("Project ID")]
         public Nullable<System.Guid> Projectid { get; set; }
         public Nullable<bool> IsDeleted { get; set; }
         public Nullable<System.DateTime> InsAt { get; set; }

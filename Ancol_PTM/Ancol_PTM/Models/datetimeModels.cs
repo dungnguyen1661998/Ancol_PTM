@@ -9,4 +9,5 @@ namespace Ancol_PTM.Models
     {
         public DateTime text { set; get; }
     }
+
 }

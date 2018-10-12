@@ -11,20 +11,36 @@ namespace Ancol_PTM.libDatabase
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class ProjectTask
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class ProjectTask : IValidatableObject
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ProjectTask()
         {
             this.ManagerComments = new HashSet<ManagerComment>();
         }
-    
+        
         public System.Guid Id { get; set; }
+        [DisplayName("Employeed ID")]
+        
         public Nullable<System.Guid> Employeeid { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayName("Task Start Date")]
+        [Required(ErrorMessage = "Field is required")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> TaskStartDate { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayName("Task End Date")]
+        [Required(ErrorMessage = "Field is required")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> TaskEndDate { get; set; }
+        [Required(ErrorMessage = "Field is required")]
+        [DisplayName("Task Status ID")]
         public Nullable<System.Guid> TaskStatusid { get; set; }
+        [Required(ErrorMessage = "Field is required")]
+        [DisplayName("User Story ID")]
         public Nullable<System.Guid> UserStoryid { get; set; }
         public Nullable<bool> IsDeleted { get; set; }
         public Nullable<System.DateTime> InsAt { get; set; }
@@ -37,5 +53,13 @@ namespace Ancol_PTM.libDatabase
         public virtual ICollection<ManagerComment> ManagerComments { get; set; }
         public virtual TaskStatu TaskStatu { get; set; }
         public virtual UserStory UserStory { get; set; }
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (TaskStartDate > TaskEndDate)
+            {
+                yield return new ValidationResult("Endate must be greater than startdate");
+            }
+        }
     }
 }

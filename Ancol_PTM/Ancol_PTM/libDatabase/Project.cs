@@ -11,8 +11,10 @@ namespace Ancol_PTM.libDatabase
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class Project
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class Project : IValidatableObject
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Project()
@@ -21,17 +23,42 @@ namespace Ancol_PTM.libDatabase
         }
     
         public System.Guid Id { get; set; }
+        [DisplayName("Name")]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$", ErrorMessage = "The First Word Must Be On Capslock")]
+        [Required(ErrorMessage = "Field is required")]
+        [StringLength(50, MinimumLength = 3,ErrorMessage ="Stringlength must be from 3-50 characters")]
         public string Name { get; set; }
+        [Required(ErrorMessage = "Field is required")]
+        [DataType(DataType.Date)]
+        [DisplayName("Start Date")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> StartDate { get; set; }
+        [Required(ErrorMessage = "Field is required")]
+        [DataType(DataType.Date)]
+        [DisplayName("End Date")]
+ 
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> EndDate { get; set; }
+        [DisplayName("Client Name")]
+        [Required(ErrorMessage = "Field is required")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Stringlength must be from 3-50 characters")]
         public string ClientName { get; set; }
         public Nullable<bool> IsDeleted { get; set; }
         public Nullable<System.DateTime> InsAt { get; set; }
         public string InsBy { get; set; }
         public Nullable<System.DateTime> UpdAt { get; set; }
         public string UpdBy { get; set; }
-    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserStory> UserStories { get; set; }
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (EndDate < StartDate)
+            {
+                yield return new ValidationResult("Endate must be greater than startdate");
+            }
+        }
+
+        
     }
 }
